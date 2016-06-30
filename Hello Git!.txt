@@ -1,0 +1,2 @@
+Console.WriteLine("Getting started with Git");
+Console.ReadLine();
