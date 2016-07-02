@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Snakeke
+{
+    class Figure
+    {
+        protected List<Point> pl;
+        public void Drow()
+        {
+            foreach (Point p in pl)
+            {
+                p.Draw();
+            }
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Snakeke
+{
+    class HorizontLine : Figure
+
+    {
+        public HorizontLine(int xL, int xR, int y, char s)
+        {
+            pl = new List<Point>();
+            for (int x = xL; x <= xR; x++)
+            {
+                Point p = new Point(x, y, s);
+                pl.Add(p);
+            }
+        }
+    }
+}
