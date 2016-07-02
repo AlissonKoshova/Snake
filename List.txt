@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Snakeke
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> l = new List<int>();
+            l.Add(0);
+            l.Add(1);
+            l.Add(2);
+
+            int x = l[0];
+            int y = l[1];
+            int z = l[2];
+            
+            foreach(int i in l)
+            {
+                Console.WriteLine(i);
+            }
+            l.RemoveAt(0);
+            
+            Point p = new Point(1,2,'#');
+            p.Draw();
+            Point p1 = new Point(5, 8, '@');
+            p1.Draw();
+            Point p2 = new Point(2, 9, '&');
+            p2.Draw();
+            Console.ReadLine();
+            List<Point> point = new List<Point>();
+            point.Add(p);
+            point.Add(p1);
+            point.Add(p2);
+        }
+    }
+}
