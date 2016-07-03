@@ -10,11 +10,23 @@ namespace Snakeke
     {
         static void Main(string[] args)
         {
-            Point p = new Point();
-            p.x = 1;
-            p.y = 2;
-            p.s = '%';
+            Console.SetBufferSize(80, 25);
+
+            HorizontLine hu = new HorizontLine(0,78,0,'*');
+            HorizontLine hd = new HorizontLine(0,78,24,'*');
+            VerticalLine vl = new VerticalLine(0,24,0,'*');
+            VerticalLine vr = new VerticalLine(0,24,78,'*');
+            hu.Drow();
+            hd.Drow();
+            vl.Drow();
+            vr.Drow();
+            
+            Point p = new Point(1, 2,'#');
             p.Draw();
+
+            Snake s = new Snake(p, 8, Direction.RIGTH);
+            s.Drow();
+
             Console.ReadLine();
         }
     }
